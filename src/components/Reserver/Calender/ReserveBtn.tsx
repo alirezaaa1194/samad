@@ -20,7 +20,7 @@ function ReserveBtn({ groupedFoods, food, weekOffset }: { groupedFoods: groupFoo
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          date: groupedFoods[0],
+          date: groupedFoods?.[0],
           food: food.id,
         }),
       });

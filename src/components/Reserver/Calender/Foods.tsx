@@ -78,7 +78,8 @@ function Foods({ groupedFoods, weekOffset }: { groupedFoods: groupFoodType; week
                 >
                   جزئیات غذا
                 </Button>
-                {groupedFoods[0]?.[1]?.[0]?.can_reserve ? <ReserveBtn groupedFoods={groupedFoods[j + 1] as any} food={food} weekOffset={weekOffset} /> : ""}
+
+                {groupedFoods[0]?.[1]?.[0]?.can_reserve ? <ReserveBtn groupedFoods={groupedFoods.find((gf) => gf[1][0].foods.some((f) => f.id == food.id)) as any} food={food} weekOffset={weekOffset} /> : ""}
               </div>
             ))}
         </div>

@@ -34,7 +34,6 @@ function Calender() {
     }
   }, [isLoading, foods]);
 
-  console.log(foods);
 
   if (isError) {
     return <span className="font-DanaDemiBold text-lg text-red-500">متاسفانه خطایی رخ داده است!</span>;

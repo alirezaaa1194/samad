@@ -26,5 +26,6 @@ export async function POST(req: NextRequest) {
     },
     body: JSON.stringify(body),
   });
+
   return NextResponse.json({ reserveFood }, { status: reserveFood.status });
 }
